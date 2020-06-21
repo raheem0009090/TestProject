@@ -2,7 +2,7 @@
 - task: Ant@1
   inputs:
     buildFile: 'build1.xml'
-    options: 
+    options:'new' 
     targets: 'run'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'

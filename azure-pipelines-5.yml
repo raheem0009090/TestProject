@@ -1,4 +1,22 @@
 # Starter pipeline
+- task: Ant@1
+  inputs:
+    buildFile: 'build1.xml'
+    options: 
+    targets: 'run'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+
+az artifacts universal publish
+    --organization https://dev.azure.com/raheemdevops/
+    --project="Test1"
+    --scope project
+    --feed TestProject
+    --name my-first-package
+    --version 0.0.1
+    --description "Welcome to Universal Packages"
+    --path .
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml

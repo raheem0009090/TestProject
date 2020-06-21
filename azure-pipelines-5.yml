@@ -1,5 +1,5 @@
 # Starter pipeline
-- task: Ant@1
+- task: Ant@7
   inputs:
     buildFile: 'bulid1.xml'
     options:'new' 

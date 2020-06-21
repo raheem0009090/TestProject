@@ -1,0 +1,6 @@
+<project name="MyProject" default="dist" basedir=".">
+<target name="zip">
+<zip destfile="${dist}/manual.zip"
+     basedir="htdocs/manual"/>
+</target>
+</project>

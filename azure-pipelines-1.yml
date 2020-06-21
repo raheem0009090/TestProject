@@ -1,4 +1,14 @@
 # Ant
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure subscription 1(d069c90a-d193-4ad5-8d45-e63696223090)'
+    subscriptionId: 'd069c90a-d193-4ad5-8d45-e63696223090'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'raheem'
+    location: 'Central India'
+    templateLocation: 'Linked artifact'
+    deploymentMode: 'Incremental'
 - task: Ant@1
   inputs:
     buildFile: 'build.xml'
